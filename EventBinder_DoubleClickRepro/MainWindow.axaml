@@ -1,0 +1,28 @@
+<Window
+	x:Class="EventBinder_DoubleClickRepro.MainWindow"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:binder="using:EventBinder"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="using:EventBinder_DoubleClickRepro"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="EventBinder_DoubleClickRepro"
+	Width="400"
+	Height="400"
+	d:DesignHeight="400"
+	d:DesignWidth="400"
+	CanResize="False"
+	mc:Ignorable="d">
+	<Window.DataContext>
+		<local:MainWindowViewModel />
+	</Window.DataContext>
+
+	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+		<Button Click="{binder:EventBinding ButtonClicked}" Content="Click Me!" />
+
+		<TextBlock Margin="0,32,0,0" HorizontalAlignment="Center">
+			<Run Text="Counter: " />
+			<Run Text="{Binding Counter}" />
+		</TextBlock>
+	</StackPanel>
+</Window>

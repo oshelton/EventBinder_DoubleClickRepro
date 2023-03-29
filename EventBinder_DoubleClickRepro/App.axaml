@@ -1,0 +1,13 @@
+<Application
+	x:Class="EventBinder_DoubleClickRepro.App"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:materialThemes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles">
+	<Application.Styles>
+		<!--  Third Party Styles  -->
+		<materialThemes:MaterialTheme
+			BaseTheme="Dark"
+			PrimaryColor="Red"
+			SecondaryColor="Lime" />
+	</Application.Styles>
+</Application>
